@@ -1,3 +1,6 @@
 .page-wrapper {
+}
+
+.break-before {
     break-before: page;
 }
