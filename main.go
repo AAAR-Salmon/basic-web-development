@@ -1,11 +1,11 @@
 package main
 
-import (
-    "net/http"
-)
+import "net/http"
 
-func main()  {
-    fs := http.FileServer(http.Dir("."))
-    http.Handle("/", fs)
-    http.ListenAndServe(":8888", nil)
+func main() {
+	fsPublic := http.FileServer(http.Dir("public"))
+	fsElements := http.FileServer(http.Dir("elements"))
+	http.Handle("/", fsPublic)
+	http.Handle("/elements/", http.StripPrefix("/elements/", fsElements))
+	http.ListenAndServe(":8888", nil)
 }
