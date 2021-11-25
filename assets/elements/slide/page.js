@@ -7,9 +7,6 @@ class SlidePage extends HTMLElement {
     background.classList.add('page-background');
     const wrapper = document.createElement('div');
     wrapper.classList.add('page-wrapper');
-    if (!this.getAttribute('first')) {
-      background.classList.add('break-before');
-    }
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
     link.setAttribute('href', '/assets/elements/slide/page.css');
