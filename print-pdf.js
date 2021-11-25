@@ -19,8 +19,15 @@ const options = commandLineArgs(optionDefinitions);
 
   await page.pdf({
     path: options.output ?? 'page.pdf',
-    width: '338.7mm',
-    height: '190.5mm'
+    width: '1920px',
+    height: '1080px',
+    margin: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0
+    },
+    preferCSSPageSize: true
   });
 
   browser.close();

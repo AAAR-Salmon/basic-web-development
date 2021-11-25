@@ -1,14 +1,14 @@
-$margin-fullscreen: 5rem
+$padding-fullscreen: 5rem
 
 .page-wrapper
     @media screen
         margin: auto
         width: 1024px
         @media (display-mode: fullscreen)
-            margin: $margin-fullscreen
+            padding: $padding-fullscreen
             font-size: 24pt
     @media print
-        margin: $margin-fullscreen
+        padding: $padding-fullscreen
         font-size: 24pt
 
 .page-background
@@ -16,6 +16,5 @@ $margin-fullscreen: 5rem
         width: 100vw
         height: 100vh
     @media print
-        width: 100vw
-        height: 100vh
-
+        width: 1920px
+        height: 1080px
