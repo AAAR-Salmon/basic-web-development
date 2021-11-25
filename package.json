@@ -1,0 +1,24 @@
+{
+  "name": "basic-web-development",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass assets",
+    "print-pdf": "node print-pdf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AAAR-Salmon/basic-web-development.git"
+  },
+  "author": "AAAR-Salmon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AAAR-Salmon/basic-web-development/issues"
+  },
+  "homepage": "https://github.com/AAAR-Salmon/basic-web-development#readme",
+  "devDependencies": {
+    "puppeteer": "^11.0.0",
+    "sass": "^1.43.5"
+  }
+}
