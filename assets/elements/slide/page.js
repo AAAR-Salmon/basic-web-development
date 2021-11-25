@@ -10,7 +10,7 @@ class SlidePage extends HTMLElement {
     }
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
-    link.setAttribute('href', '/elements/slide/page.css');
+    link.setAttribute('href', '/assets/elements/slide/page.css');
     shadow.appendChild(link);
     wrapper.append(...this.childNodes);
     shadow.appendChild(wrapper);
