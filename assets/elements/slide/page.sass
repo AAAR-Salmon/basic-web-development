@@ -1,14 +1,23 @@
-$padding-fullscreen: 5rem
+$margin-fullscreen: 5rem
 
 .page-wrapper
     @media screen
         margin: auto
         width: 1024px
-    @media screen and (display-mode: fullscreen)
-        width: calc(100vw - $padding-fullscreen * 2)
-        height: calc(100vh - $padding-fullscreen * 2)
-        padding: $padding-fullscreen
+        @media (display-mode: fullscreen)
+            margin: $margin-fullscreen
+            font-size: 24pt
+    @media print
+        margin: $margin-fullscreen
         font-size: 24pt
+
+.page-background
+    @media screen and (display-mode: fullscreen)
+        width: 100vw
+        height: 100vh
+    @media print
+        width: 100vw
+        height: 100vh
 
 .break-before
     break-before: page

@@ -3,17 +3,20 @@ class SlidePage extends HTMLElement {
     super();
 
     const shadow = this.attachShadow({ mode: 'closed' });
+    const background = document.createElement('div');
+    background.classList.add('page-background');
     const wrapper = document.createElement('div');
     wrapper.classList.add('page-wrapper');
     if (!this.getAttribute('first')) {
-      wrapper.classList.add('break-before');
+      background.classList.add('break-before');
     }
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
     link.setAttribute('href', '/assets/elements/slide/page.css');
     shadow.appendChild(link);
     wrapper.append(...this.childNodes);
-    shadow.appendChild(wrapper);
+    background.append(wrapper);
+    shadow.appendChild(background);
   }
 }
 
