@@ -25,3 +25,7 @@ npx sass assets/
 # Start server
 go run main.go
 ```
+
+## LICENSE
+
+This repository is provided under the MIT License. See the "LICENSE" file.
