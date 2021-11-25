@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/AAAR-Salmon/basic-web-development#readme",
   "devDependencies": {
+    "command-line-args": "^5.2.0",
     "puppeteer": "^11.0.0",
     "sass": "^1.43.5"
   }
