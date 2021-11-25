@@ -1,0 +1,14 @@
+$padding-fullscreen: 5rem
+
+.page-wrapper
+    @media screen
+        margin: auto
+        width: 1024px
+    @media screen and (display-mode: fullscreen)
+        width: calc(100vw - $padding-fullscreen * 2)
+        height: calc(100vh - $padding-fullscreen * 2)
+        padding: $padding-fullscreen
+        font-size: 24pt
+
+.break-before
+    break-before: page
