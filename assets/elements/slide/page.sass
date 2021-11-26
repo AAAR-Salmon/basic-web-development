@@ -3,18 +3,19 @@ $primary-color: #e4cfff
 $secondary-color: #ffe2fa
 
 .page-wrapper
+    @mixin pwr-full
+        box-sizing: border-box
+        width: 100vw
+        height: 100vh
+        padding: $padding-fullscreen
+        font-size: 24pt
     @media screen
         margin: auto
         width: 1024px
         @media (display-mode: fullscreen)
-            box-sizing: border-box
-            width: 100vw
-            padding: $padding-fullscreen
-            font-size: 24pt
+            @include pwr-full
     @media print
-        padding: $padding-fullscreen
-        font-size: 24pt
-
+        @include pwr-full
 
 .page-background
     @mixin pbg-full
