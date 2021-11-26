@@ -46,12 +46,13 @@ $secondary-color: #ffe2fa
 .takahashi
     @mixin tak-full
         display: flex
+        flex-direction: column
         width: 100%
         height: 100%
         justify-content: center
         align-items: center
         text-align: center
     @media screen and (display-mode: fullscreen)
-        @include tak
+        @include tak-full
     @media print
-        @include tak
+        @include tak-full
