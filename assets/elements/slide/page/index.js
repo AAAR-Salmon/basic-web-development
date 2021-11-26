@@ -9,7 +9,7 @@ class SlidePage extends HTMLElement {
     wrapper.classList.add('page-wrapper');
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
-    link.setAttribute('href', '/assets/elements/slide/page.css');
+    link.setAttribute('href', '/assets/elements/slide/page/style.css');
     shadow.appendChild(link);
     wrapper.append(...this.childNodes);
     background.append(wrapper);
