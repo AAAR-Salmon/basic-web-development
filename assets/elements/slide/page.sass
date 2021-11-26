@@ -15,24 +15,24 @@ $secondary-color: #ffe2fa
         padding: $padding-fullscreen
         font-size: 24pt
 
-@mixin pbg-full
-    position: relative
-    z-index: 0
-    &::after
-        position: absolute
-        content: ''
-        top: 0
-        bottom: 0
-        right: 0
-        left: 85vw
-        z-index: -10000
-        box-sizing: border-box
-        border-right: 7.5vw solid $primary-color
-        border-bottom: 50vh solid $secondary-color
-        border-top: 50vh solid transparent
-        border-left: 7.5vw solid transparent
 
 .page-background
+    @mixin pbg-full
+        position: relative
+        z-index: 0
+        &::after
+            position: absolute
+            content: ''
+            top: 0
+            bottom: 0
+            right: 0
+            left: 85vw
+            z-index: -10000
+            box-sizing: border-box
+            border-right: 7.5vw solid $primary-color
+            border-bottom: 50vh solid $secondary-color
+            border-top: 50vh solid transparent
+            border-left: 7.5vw solid transparent
     @media screen and (display-mode: fullscreen)
         @include pbg-full
         width: 100vw
