@@ -26,13 +26,29 @@
   });
 
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      setPageNum(getPageNum() + 1);
-    }
-    if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      setPageNum(getPageNum() - 1);
+    switch (e.key) {
+      case 'ArrowRight':
+      case 'ArrowDown':
+      case 'PageDown':
+      case 'Enter':
+        e.preventDefault();
+        setPageNum(getPageNum() + 1);
+        break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+      case 'PageUp':
+      case 'Backspace':
+        e.preventDefault();
+        setPageNum(getPageNum() - 1);
+        break;
+      case 'Home':
+        e.preventDefault();
+        setPageNum(0);
+        break;
+      case 'End':
+        e.preventDefault();
+        setPageNum(pageCount - 1);
+        break;
     }
   });
 })();
