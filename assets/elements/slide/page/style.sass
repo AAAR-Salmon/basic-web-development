@@ -3,7 +3,10 @@ $primary-color: #e4cfff
 $secondary-color: #ffe2fa
 
 .page-wrapper
-    @mixin pwr-full
+    @media screen
+        margin: auto
+        width: 1024px
+    @media print, screen and (display-mode: fullscreen)
         box-sizing: border-box
         width: 100vw
         height: 100vh
@@ -12,16 +15,9 @@ $secondary-color: #ffe2fa
         a
             color: black
             text-decoration: none
-    @media screen
-        margin: auto
-        width: 1024px
-        @media (display-mode: fullscreen)
-            @include pwr-full
-    @media print
-        @include pwr-full
 
 .page-background
-    @mixin pbg-full
+    @media print, screen and (display-mode: fullscreen)
         position: relative
         z-index: 0
         &::after
@@ -38,16 +34,14 @@ $secondary-color: #ffe2fa
             border-top: 50vh solid transparent
             border-left: 7.5vw solid transparent
     @media screen and (display-mode: fullscreen)
-        @include pbg-full
         width: 100vw
         height: 100vh
     @media print
-        @include pbg-full
         width: 1920px
         height: 1080px
 
 .takahashi
-    @mixin tak-full
+    @media print, screen and (display-mode: fullscreen)
         display: flex
         flex-direction: column
         width: 100%
@@ -56,7 +50,3 @@ $secondary-color: #ffe2fa
         align-items: center
         text-align: center
         font-size: 2em
-    @media screen and (display-mode: fullscreen)
-        @include tak-full
-    @media print
-        @include tak-full
