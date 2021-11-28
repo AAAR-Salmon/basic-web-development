@@ -53,3 +53,10 @@ $secondary-color: #ffe2fa
         align-items: center
         text-align: center
         font-size: 2em
+
+.two-column
+    @media print, screen and (display-mode: fullscreen)
+        display: flex
+        flex-direction: row
+        & > *
+            flex: auto
