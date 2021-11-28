@@ -2,6 +2,10 @@ $padding-fullscreen: 5rem
 $primary-color: #e4cfff
 $secondary-color: #ffe2fa
 
+:host
+    @media print, screen and (display-mode: fullscreen)
+        font-size: 3rem
+
 .page-wrapper
     @media screen
         margin: auto
@@ -11,7 +15,6 @@ $secondary-color: #ffe2fa
         width: 100vw
         height: 100vh
         padding: $padding-fullscreen
-        font-size: 36pt
         a
             color: black
             text-decoration: none
