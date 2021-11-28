@@ -7,6 +7,9 @@ class SlidePage extends HTMLElement {
     background.classList.add('page-background');
     const wrapper = document.createElement('div');
     wrapper.classList.add('page-wrapper');
+    if (this.hasAttribute('takahashi') && this.getAttribute('takahashi') !== 'false') {
+      wrapper.classList.add('takahashi');
+    }
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
     link.setAttribute('href', '/assets/elements/slide/page/style.css');
