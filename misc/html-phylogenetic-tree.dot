@@ -1,0 +1,22 @@
+digraph {
+  rankdir=LR
+
+  node [shape=record]
+
+  GML[label="GML|IBM|1969--" style="solid,filled" bgcolor="gray"]
+  SGML[label="SGML|ISO|1986--"]
+  HTML2[label="HTML2|IETF|1995--2000" style="solid,filled" bgcolor="gray"]
+  HTML3[label="HTML3|W3C|1997--2018" style="solid,filled" bgcolor="gray"]
+  HTML4[label="HTML4|W3C|1999--2018" style="solid,filled" bgcolor="gray"]
+  HTML5[label="HTML5|W3C|2014--2021" style="solid,filled" bgcolor="gray"]
+  HTMLLS[label="HTML Living Standard|WHATWG|2004--"]
+  XML[label="XML|W3C|1998--"]
+  XHTML[label="XHTML|W3C|2000--2018" style="solid,filled" bgcolor="gray"]
+  MHTML[label="MHTML|IETF|1997--"]
+
+  GML -> SGML -> {HTML2 XML}
+  HTML2 -> HTML3 -> HTML4 -> {HTMLLS HTML5}
+  HTMLLS -> HTML5 -> HTMLLS
+  {HTML4 XML} -> XHTML
+  HTML2 -> MHTML
+}
