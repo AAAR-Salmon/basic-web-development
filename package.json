@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass assets public",
+    "sass": "sass assets public --style=compressed",
     "print-pdf": "node print-pdf.js"
   },
   "repository": {
