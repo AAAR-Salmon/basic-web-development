@@ -13,10 +13,18 @@ digraph {
   XML[label="XML|W3C|1998--"]
   XHTML[label="XHTML|W3C|2000--2018" style="solid,filled" fillcolor="lightgray"]
   MHTML[label="MHTML|IETF|1997--"]
+  MathML1[label="MathML1|W3C|1998--"]
+  MathML2[label="MathML2|W3C|2001--"]
+  MathML3[label="MathML3|W3C|2010--"]
+  SVG1[label="SVG1|W3C|2001--"]
+  SVG2[label="SVG2|W3C|Candidate" style="solid,filled" fillcolor="pink"]
 
   GML -> SGML -> {HTML2 XML}
   HTML2 -> HTML3 -> HTML4 -> {HTMLLS HTML5}
-  HTMLLS -> HTML5 -> HTMLLS
+  HTMLLS -> HTML5 [label="決裂(2012)"]
+  HTML5 -> HTMLLS [label="合併(2019)"]
   {HTML4 XML} -> XHTML
   HTML2 -> MHTML
+  XML -> MathML1 -> MathML2 -> MathML3
+  XML -> SVG1 -> SVG2
 }
