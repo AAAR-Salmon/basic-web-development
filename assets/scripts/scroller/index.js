@@ -9,14 +9,14 @@
       return;
     }
     if (n < 0) {
-      location.hash = 0;
+      location.replace('#0');
       return;
     }
     if (n >= pageCount) {
-      location.hash = pageCount - 1;
+      location.replace(`#${pageCount - 1}`);
       return;
     }
-    location.hash = n;
+    location.replace(`#${n}`);
   }
 
   const pageElements = document.querySelectorAll('slide-page');
